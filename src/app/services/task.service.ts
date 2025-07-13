@@ -29,6 +29,8 @@ export class TaskService {
 
   addTask(task: Task) {
 
+    task.id = this.tasks.length + 1; // Define um ID único para a nova tarefa
+
     this.tasks.push(task);
     
     this.saveLocalStorage();
